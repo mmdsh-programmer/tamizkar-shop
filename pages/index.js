@@ -1,18 +1,6 @@
 import Head from "next/head";
 import Card from "components/Card";
 
-const {
-  default: { src: cardImage },
-} = require("src/images/card-image.webp");
-
-const {
-  default: { src: cardImage2 },
-} = require("src/images/card-image-2.webp");
-
-const {
-  default: { src: cardImage3 },
-} = require("src/images/card-image-3.webp");
-
 export default function Home() {
   return (
     <>
@@ -25,9 +13,21 @@ export default function Home() {
       <main className="min-h-screen pt-24 md:pt-0 pb-4 md:pb-0 px-4 md:px-0">
         <section className="min-h-screen">
           <div className="container max-w-7xl mx-auto grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 md:place-items-center lg:gap-8 gap-4 md:min-h-screen md:px-4">
-            <Card image={cardImage} title={"قطعات یدکی"} href={"/"} />
-            <Card image={cardImage2} title={"فروش یاتاقان"} href={"/"} />
-            <Card image={cardImage3} title={"مکانیک سیار"} href={"/"} />
+            <Card
+              image="/images/card-image.webp"
+              title={"قطعات یدکی"}
+              href={"/"}
+            />
+            <Card
+              image="/images/card-image-2.webp"
+              title={"فروش یاتاقان"}
+              href={"/"}
+            />
+            <Card
+              image="/images/card-image-3.webp"
+              title={"مکانیک سیار"}
+              href={"/"}
+            />
           </div>
         </section>
       </main>
